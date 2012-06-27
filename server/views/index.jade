@@ -1,2 +1,14 @@
-h1= title
+script(src='/javascripts/index.js')
+
 p Welcome to #{title}
+.row-fluid
+	form#inspire(method='post', action='/submit')
+		label url:
+		input#url(name='doc[url]')
+		label your name:
+		input#name(name='user[name]')
+		label tell me more:
+		textarea#blurb(name='doc[blurb]')
+		button.submit.btn.btn-primary submit
+.row-fluid
+	#articles
