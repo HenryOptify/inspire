@@ -1,14 +1,13 @@
 script(src='/javascripts/index.js')
 
-p Welcome to #{title}
 .row-fluid
-	form#inspire(method='post', action='/submit')
-		label url:
-		input#url(name='doc[url]')
-		label your name:
-		input#name(name='user[name]')
-		label tell me more:
-		textarea#blurb(name='doc[blurb]')
-		button.submit.btn.btn-primary submit
+	.article
+		h1.title #{title}
+
+for doc in docs
+	h2.url #{doc.doc.url}
+	.blurb #{doc.doc.blurb}
+
+		
 .row-fluid
 	#articles
